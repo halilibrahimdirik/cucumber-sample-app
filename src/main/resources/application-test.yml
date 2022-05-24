@@ -1,0 +1,23 @@
+logging:
+  level:
+    org:
+      springframework: INFO
+odata:
+  jpa:
+    punit_name: fs
+    root_packages: com.microservices.poc
+server:
+  port: 9010
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=PostgreSQL
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+  flyway:
+    enabled: true
+    schemas:
+    -  fs
+  servlet:
+    multipart:
+      enabled: false

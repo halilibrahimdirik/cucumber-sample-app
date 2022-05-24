@@ -1,0 +1,31 @@
+logging:
+  level:
+    org:
+      springframework: INFO
+    com:
+      sap:
+        olingo:
+          jpa: TRACE
+odata:
+  jpa:
+    punit_name: fs
+    root_packages: com.microservices.poc
+server:
+  port: 9010
+spring:
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/fsdb
+    username: fsuser
+    password: 'Password1'
+  flyway:
+    url: jdbc:postgresql://localhost:5432/fsdb
+    user: fsuser
+    password: 'Password1'
+    baselineOnMigrate: true
+    validateOnMigrate: false
+    schemas:
+      - fs
+  servlet:
+    multipart:
+      enabled: false
